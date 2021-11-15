@@ -9,13 +9,9 @@ def append_getters_and_setters_to_list(input_list, output_list):
 
 if __name__ == '__main__':
     with open('input.txt', 'r') as file:
-        lines = file.readlines()
+        ldap_values = [line.strip() for line in file.readlines()]
 
-    ldap_values = []
     final_output = []
-
-    for line in lines:
-        ldap_values.append(line.strip())
 
     append_getters_and_setters_to_list(ldap_values, final_output)
 
